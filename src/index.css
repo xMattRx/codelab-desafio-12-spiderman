@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@theme inline;
+
+
+@layer base {
+  :root {
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+
+
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+        background: linear-gradient(0deg, #1A2841 0%, #0B1322 100%, #080A0E 100%);
+    @apply text-white bg-black;
+  }
+
+  a {
+    @apply font-medium text-[#646cff] no-underline;
+  }
+
+  a:hover {
+    @apply text-[#535bf2];
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+  }
+
+  button {
+    @apply rounded border border-transparent px-3 py-2 text-base font-medium bg-[#1a1a1a] cursor-pointer transition-colors duration-200;
+  }
+
+  button:hover {
+    border-color: #646cff;
+  }
+
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+
+    a:hover {
+      color: #747bff;
+    }
+
+    button {
+      background-color: #f9f9f9;
+    }
+  }
+}
